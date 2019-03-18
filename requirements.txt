@@ -1,0 +1,4 @@
+Django==2.1.5
+django-authtools==1.6.0
+djangorestframework==3.8.2
+djangorestframework-jwt==1.11.0

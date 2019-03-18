@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+
+from __future__ import division, print_function, unicode_literals
+
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('authtools.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+]

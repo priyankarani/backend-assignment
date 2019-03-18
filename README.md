@@ -1,2 +1,3 @@
-# backend-assignment
-ParityGo backend developer assignment
+# ParityGo backend assignment
+
+Base Django project.
