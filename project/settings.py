@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-from __future__ import division, print_function, unicode_literals
 
 import os
 
@@ -27,9 +24,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party apps
     'authtools',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'rest_framework_jwt',
     # Project apps
     'homes',
 ]
@@ -108,20 +102,3 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'backend.sqlite3'),
     }
 }
-
-# DRF + DRF JWT Settings
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    ),
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20,
-    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
-}
-
-LOGIN_URL = 'rest_framework:login'
-LOGOUT_URL = 'rest_framework:logout'
